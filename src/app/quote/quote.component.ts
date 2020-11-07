@@ -20,14 +20,12 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
 
-  // quotes: Quote[] = [
-  //   {id: 1, name: 'Your time is limited', description: 'so dont waste it living someone elses life'},
-  //   {id: 2, name: 'If you look at what you have in life', description: 'you will always  have more'},
-  //   {id: 3, name: 'Life is what happens', description: 'when you are busy making other plans'},
-  //   {id: 4, name: 'The way to get started', description: 'is to quit talking and begin doing'},
-  //   {id: 5, name: 'If life were predictable it would cease', description: 'to be life,and be without flavor'},
-  // ];
-
+  // tslint:disable-next-line: typedef
+  completeQuote(isComplete, index){
+    if (isComplete) {
+      this.quotes.splice(index, 1);
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
