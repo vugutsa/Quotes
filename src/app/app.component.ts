@@ -10,7 +10,7 @@ export class AppComponent {
   quote = 'any quote of your choice';
 
 
-  quotes : string[];
+  quotes  : string[];
 
   constructor(){
     this.quotes = ['Your time is limited', 'If you look at what you have in life', 'Life is what happens'];
