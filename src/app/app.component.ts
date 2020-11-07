@@ -16,9 +16,10 @@ export class AppComponent {
   //   {id: 4, name: 'The way to get started'},
   //   {id: 5, name: 'If life were predictable it would cease'},
   // ];
-  // quotes  : string[];
 
-  // constructor(){
-  //   this.quotes = ['Your time is limited', 'If you look at what you have in life', 'Life is what happens'];
-  // }
+// quotes: string[];
+
+//   constructor(){
+//     this.quotes = ['Your time is limited', 'If you look at what you have in life', 'Life is what happens'];
+//   }
 }
