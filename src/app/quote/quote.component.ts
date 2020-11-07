@@ -15,6 +15,10 @@ export class QuoteComponent implements OnInit {
     new Quote(5, 'If life were predictable it would cease',  'to be life,and be without flavor'),
   ];
 
+  // tslint:disable-next-line: typedef
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
 
   // quotes: Quote[] = [
   //   {id: 1, name: 'Your time is limited', description: 'so dont waste it living someone elses life'},
