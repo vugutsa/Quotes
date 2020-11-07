@@ -9,6 +9,11 @@ export class QuoteDetailComponent implements OnInit {
   @Input() quote: Quote;
   @Output() isComplete = new EventEmitter<boolean>();
 
+  // do away with it sometime
+ // tslint:disable-next-line: typedef
+//  quoteDelete(complete: boolean){
+//     this.isComplete.emit(complete);
+//   }
   // tslint:disable-next-line: typedef
   quoteComplete(complete: boolean){
     this.isComplete.emit(complete);
