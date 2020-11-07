@@ -1,5 +1,5 @@
+import { Quote } from './quote';
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,16 +10,15 @@ export class AppComponent {
   quote = 'any quote of your choice';
 
   quotes: Quote[] = [
-    {id:1, name:'Watch finding Nemo'},
-    {id:2,name:'Buy Cookies'},
-    {id:3,name:'Get new Phone Case'},
-    {id:4,name:'Get Dog Food'},
-    {id:5,name:'Solve math homework'},
-    {id:6,name:'Plot my world domination plan'},
+    {id: 1, name: 'Your time is limited'},
+    {id: 2, name: 'If you look at what you have in life'},
+    {id: 3, name: 'Life is what happens'},
+    {id: 4, name: 'The way to get started'},
+    {id: 5, name: 'If life were predictable it would cease'},
   ];
-  quotes  : string[];
+  // quotes  : string[];
 
-  constructor(){
-    this.quotes = ['Your time is limited', 'If you look at what you have in life', 'Life is what happens'];
-  }
+  // constructor(){
+  //   this.quotes = ['Your time is limited', 'If you look at what you have in life', 'Life is what happens'];
+  // }
 }

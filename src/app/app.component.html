@@ -8,7 +8,8 @@
   <h1>Choose or add your favorite quotes</h1>
   <ul>
       <li *ngFor='let quote of quotes'>
-        {{quote}}
+        {{quote.name}}
       </li>
   </ul>
+  <p *ngIf='quote.length > 5'>Your quotes are excess.</p>
 </div>
