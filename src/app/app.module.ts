@@ -7,7 +7,9 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
-import { GoalFormComponent } from './goal-form/goal-form.component';
+import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { FormsModule } from '@angular/forms';
+// import { GoalFormComponent } from './goal-form/goal-form.component';
 // import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
@@ -17,12 +19,14 @@ import { GoalFormComponent } from './goal-form/goal-form.component';
     QuoteDetailComponent,
     StrikethroughDirective,
     DateCountPipe,
-    GoalFormComponent,
+    QuoteFormComponent,
+    // GoalFormComponent,
     // DateCountPipe,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

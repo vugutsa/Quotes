@@ -11,11 +11,16 @@ export class QuoteDetailComponent implements OnInit {
 
 
  // tslint:disable-next-line: typedef
-//  quoteDelete(complete: boolean){
-//     this.isComplete.emit(complete);
-//   }
+ quoteComplete(complete: boolean){
+    this.isComplete.emit(complete);
+  }
   // tslint:disable-next-line: typedef
-  quoteComplete(complete: boolean){
+  // quoteDelete(complete: boolean){
+  //   this.isComplete.emit(complete);
+  // }
+
+  // tslint:disable-next-line: typedef
+  quoteDelete(complete: boolean){
     this.isComplete.emit(complete);
   }
   constructor() { }

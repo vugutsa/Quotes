@@ -16,9 +16,9 @@ export class QuoteComponent implements OnInit {
   ];
 
   // tslint:disable-next-line: typedef
-  toggleDetails(index){
-    this.quotes[index].showDescription = !this.quotes[index].showDescription;
-  }
+  // toggleDetails(index){
+  //   this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  // }
 
   // tslint:disable-next-line: typedef
   completeQuote(isComplete, index){
@@ -27,9 +27,23 @@ export class QuoteComponent implements OnInit {
     }
   }
 
+
+  // tslint:disable-next-line: typedef
+  deleteQuote(isComplete, index){
+    if (isComplete) {
+      // tslint:disable-next-line: prefer-const
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`);
+
+      if (toDelete){
+        this.quotes.splice(index, 1);
+      }
+    }
+  }
+
   // tslint:disable-next-line: typedef
   // deleteQuote(isComplete, index){
   //   if (isComplete) {
+  //     // tslint:disable-next-line: prefer-const
   //     let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
 
   //     if (toDelete){
@@ -37,6 +51,10 @@ export class QuoteComponent implements OnInit {
   //     }
   //   }
   // }
+  // tslint:disable-next-line: typedef
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
 
   // quotes: Quote[] = [
   //   {id: 1, name: 'Your time is limited','so dont waste it living someone elses life'),
