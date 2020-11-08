@@ -39,30 +39,16 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
-
-  // tslint:disable-next-line: typedef
-  // deleteQuote(isComplete, index){
-  //   if (isComplete) {
-  //     // tslint:disable-next-line: prefer-const
-  //     let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
-
-  //     if (toDelete){
-  //       this.quotes.splice(index, 1);
-  //     }
-  //   }
-  // }
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    quote.completeDate = new Date(quote.completeDate);
+    this.quotes.push(quote);
+  }
   // tslint:disable-next-line: typedef
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
-
-  // quotes: Quote[] = [
-  //   {id: 1, name: 'Your time is limited','so dont waste it living someone elses life'),
-  //   {id: 2, name: 'If you look at what you have in life', description: 'you will always  have more'},
-  //   {id: 3, name: 'Life is what happens', description: 'when you are busy making other plans'},
-  //   {id: 4, name: 'The way to get started', description: 'is to quit talking and begin doing'},
-  //   {id: 5, name: 'If life were predictable it would cease', description: 'to be life,and be without flavor'},
-  // ];
 
   constructor() { }
 
