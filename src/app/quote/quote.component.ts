@@ -20,10 +20,21 @@ export class QuoteComponent implements OnInit {
   downVote(index) {
     this.quotes[index].downvote++;
   }
-  // tslint:disable-next-line: typedef
-  // toggleDetails(index){
-  //   this.quotes[index].showDescription = !this.quotes[index].showDescription;
-  // }
+  highestVote(){
+    let appHighestVote =  new Quote(0, '' , '', new Date());
+    for (let i = 0; i < this.quotes.length; i++) {
+      if (this.quotes[i].upvote > appHighestVote.upvote) {
+        appHighestVote = this.quotes[i];
+      }
+    }
+    if (appHighestVote.upvote > 0) {
+      return appHighestVote;
+    }else {
+      return;
+    }
+  }
+
+
 
   // tslint:disable-next-line: typedef
   completeQuote(isComplete, index){
